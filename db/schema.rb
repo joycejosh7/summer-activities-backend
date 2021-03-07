@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2021_03_06_202249) do
   create_table "activities", force: :cascade do |t|
     t.string "title"
     t.string "description"
-    t.integer "author_id"
+    t.integer "creator_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

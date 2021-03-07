@@ -3,7 +3,7 @@ class CreateActivities < ActiveRecord::Migration[6.1]
     create_table :activities do |t|
       t.string :title
       t.string :description
-      t.integer :author_id
+      t.integer :creator_id
 
       t.timestamps
     end

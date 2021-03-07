@@ -38,6 +38,6 @@ class ActivitiesController < ApplicationController
     private 
 
     def activity_params
-        params.require(:activity).permit(:title,:content,:creator_id)
+        params.require(:activity).permit(:title,:description,:creator_id)
     end
 end

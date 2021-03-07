@@ -13,11 +13,9 @@ class Activity < ApplicationRecord
         { 
             id: self.id,
             title: self.title,
-            content: self.content,
-            author: {
-                id: self.author.id,
-                name: self.author.name
-             }
+            content: self.description,
+            creator: self.creator.name
+              
          }
     end 
 end

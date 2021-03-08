@@ -13,7 +13,7 @@ class Activity < ApplicationRecord
         { 
             id: self.id,
             title: self.title,
-            content: self.description,
+            description: self.description,
             creator: self.creator.name
               
          }

@@ -1,4 +1,5 @@
 class ActivitiesController < ApplicationController
+    before_action :activity, only: [:show, :update, :destroy]
     def index
         activity = Activity.all 
         # render json: activity
@@ -34,8 +35,18 @@ class ActivitiesController < ApplicationController
         end
     end 
 
+    def destroy
+        activity.destroy
+
+        render json: activity
+    end
+
 
     private 
+
+    def activity
+        activity = Activity.find(params[:id])
+    end
 
     def activity_params
         params.require(:activity).permit(:title,:description,:creator_id)

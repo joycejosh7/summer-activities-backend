@@ -36,9 +36,7 @@ class ActivitiesController < ApplicationController
     end 
 
     def destroy
-        p "*" * 99
         activity = Activity.find(params[:id])
-        p activity
         activity.destroy
 
         render json: activity.instance_to_json
